@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Математика — 5 клас</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #eef5ff;
+  text-align: center;
+  padding: 30px;
+}
+.card {
+  background: white;
+  max-width: 500px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 20px;
+}
+h1 { color: #2457a7; }
+input {
+  padding: 12px;
+  width: 100px;
+  font-size: 20px;
+}
+button {
+  padding: 12px 24px;
+  background: #2864c5;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#result {
+  font-size: 20px;
+  margin-top: 20px;
+}
+</style>
+</head>
+<body>
+<div class="card">
+  <h1>Математика. 5 клас</h1>
+  <h2>Ділення з остачею</h2>
+  <p>Обчисли: 47 : 5</p>
+  <p>Частка:
+    <input id="q" type="number">
+  </p>
+  <p>Остача:
+    <input id="r" type="number">
+  </p>
+  <button onclick="checkAnswer()">Перевірити</button>
+  <div id="result"></div>
+</div>
+<script>
+function checkAnswer() {
+  let q = Number(document.getElementById("q").value);
+  let r = Number(document.getElementById("r").value);
+  let result = document.getElementById("result");
+
+  if (q === 9 && r === 2) {
+    result.innerHTML = "🌟 Правильно! Молодець!";
+    result.style.color = "green";
+  } else {
+    result.innerHTML = "Спробуй ще раз!";
+    result.style.color = "red";
+  }
+}
+</script>
+</body>
+</html>
